@@ -1,7 +1,8 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from '@remix-run/react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { Icon, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
+import homeStyles from '~/styles/home.css';
 
 
 export const meta: V2_MetaFunction = () => {
@@ -14,10 +15,17 @@ export const meta: V2_MetaFunction = () => {
   export default function home() {
     return (
     <main>
-      <h1>homepage</h1>
+      <h1>Homepage</h1>
       <IconButton component={Link} to="/">
       <ArrowBackIosIcon />
       </IconButton>
+      <p id="cta">
+        <Link to="/">back</Link>
+      </p>
     </main>
     );
   }
+
+export function links() {
+   return [{ rel: 'stylesheet', href: homeStyles }];
+}
