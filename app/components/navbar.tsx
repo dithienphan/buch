@@ -1,8 +1,8 @@
 import NavStyles from '~/styles/navbarStyles.css';
 
-export function Navbar () {
-    return (
-      <>
+export function Navbar() {
+  return (
+    <>
       <nav id="navbar">
         <div>
           <ul id="items">
@@ -18,8 +18,8 @@ export function Navbar () {
           </ul>
         </div>
       </nav>
-      </>
-    );
+    </>
+  );
 }
 
 export function links() {

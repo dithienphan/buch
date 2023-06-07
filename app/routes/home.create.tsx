@@ -1,7 +1,5 @@
-import { Navbar } from '~/components/navbar'
+import { Navbar } from '~/components/navbar';
 
-  export default function Create() {
-    return (
-    <h1>create</h1>
-    );
-  }
+export default function Create() {
+  return <h1>create</h1>;
+}

@@ -1,7 +1,5 @@
-import { Navbar } from '~/components/navbar'
+import { Navbar } from '~/components/navbar';
 
-  export default function Search() {
-    return (
-    <h1>search</h1>
-    );
-  }
+export default function Search() {
+  return <h1>search</h1>;
+}

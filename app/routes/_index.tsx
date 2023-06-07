@@ -1,26 +1,26 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from '@remix-run/node';
 import { Link } from '@remix-run/react';
-import IndexStyles from "~/styles/index.css";
+import IndexStyles from '~/styles/index.css';
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
   ];
 };
 
 export function links() {
   return [
     {
-      rel: "stylesheet",
-      href: IndexStyles
-    }
-  ]
+      rel: 'stylesheet',
+      href: IndexStyles,
+    },
+  ];
 }
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
