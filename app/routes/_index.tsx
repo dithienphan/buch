@@ -1,5 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from '@remix-run/react';
+import IndexStyles from "~/styles/index.css";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -7,6 +8,15 @@ export const meta: V2_MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: IndexStyles
+    }
+  ]
+}
 
 export default function Index() {
   return (
