@@ -1,4 +1,11 @@
-#cta {
-    color:	#FF1493;
-    font-size: 60px;
+header{
+    display: inline;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: auto;
+}
+
+body{
+    padding-top: 80px;
 }

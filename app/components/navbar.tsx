@@ -1,19 +1,33 @@
-import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from '@remix-run/react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { IconButton } from "@mui/material";
-import homeStyles from '~/styles/home.css';
+import NavStyles from '~/styles/navbar.css';
 
 export function Navbar () {
     return (
-        <div>
-            <h1>Navigationssleiste</h1>
+      <body>
         <nav>
-            <a href="/">
-            <h1>Back</h1>
-            </a>
+          <IconButton id="icon1" style={{scale: "10%"}} component={Link} to="/">
+            <ArrowBackIosIcon style={{scale: "10%"}}/>
+          </IconButton>
+          <div>
+            <ul id="navbar">
+              <li>
+                <a href="/home">Home</a>
+              </li>
+              <li>
+                <a href="/home/search">Search</a>
+              </li>
+              <li>
+                <a href="/home/create">Create</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-        </div>
-        
-    )
+      </body>
+    );
+}
+
+export function links() {
+  return [{ rel: 'stylesheet', href: NavStyles }];
 }
