@@ -1,15 +1,10 @@
-import { Link } from '@remix-run/react';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { IconButton } from "@mui/material";
 import NavStyles from '~/styles/navbar.css';
 
 export function Navbar () {
     return (
       <body>
         <nav>
-          <IconButton id="icon1" style={{scale: "10%"}} component={Link} to="/">
-            <ArrowBackIosIcon style={{scale: "10%"}}/>
-          </IconButton>
+          
           <div>
             <ul id="navbar">
               <li>
