@@ -1,17 +1,3 @@
-@import "navbar";
-
-$primary_background_colour: white;
-$secondary_background_colour: grey;
-
-$primary_colour: black;
-$secondary_colour: blue;
-$error_Colour: red;
-
-h1{
-    color: $primary_colour;
-    background-color: $secondary_background_colour;
-}
-
 nav {
     overflow: hidden;
     background-color: #333;

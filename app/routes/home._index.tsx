@@ -1,9 +1,5 @@
 import type { V2_MetaFunction } from '@remix-run/node';
-import homeStyles from '~/styles/home.css';
-import { Navbar } from '~/components/navbar';
-import { IconButton } from '@mui/material';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { Link } from '@remix-run/react';
+import homeStyles from '~/styles/index.css';
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -15,13 +11,24 @@ export const meta: V2_MetaFunction = () => {
 export default function Home() {
   return (
     <body>
-      <Navbar />
       <h1>Homepage</h1>
       <main>
-        <IconButton id="icon1" style={{ scale: '10%' }} component={Link} to="/">
-          <ArrowBackIosIcon style={{ scale: '10%' }} />
-        </IconButton>
-        <h1>Inhalt</h1>
+        <nav id="navbar">
+          <div>
+            <ul id="items">
+              <li>
+                <a href="/home">Home</a>
+              </li>
+              <li>
+                <a href="/home/search">Search</a>
+              </li>
+              <li>
+                <a href="/home/create">Create</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <h2>Homepage</h2>
       </main>
     </body>
   );
