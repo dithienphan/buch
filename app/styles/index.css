@@ -57,4 +57,8 @@ nav ul li a {
 }
 nav ul li a:hover {
   background-color: #111;
+}
+
+body {
+  padding-top: 10px;
 }/*# sourceMappingURL=index.css.map */

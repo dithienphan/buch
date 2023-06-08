@@ -1,5 +1,15 @@
-import { Navbar } from '~/components/navbar';
+import homeStyles from '~/styles/index.css';
 
-export default function Create() {
-  return <h1>create</h1>;
+export default function HomeCreate() {
+  return (
+    <body>
+      <main>
+        <h2>Create</h2>
+      </main>
+    </body>
+  );
+}
+
+export function links() {
+  return [{ rel: 'stylesheet', href: homeStyles }];
 }
