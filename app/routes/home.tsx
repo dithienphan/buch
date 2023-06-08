@@ -4,15 +4,17 @@ import { Navbar } from '~/components/navbar';
 
 export default function Home() {
   return (
-    <div>
+    <body>
       <nav>
         <Navbar />
       </nav>
       <h1>Home</h1>
       <main>
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </main>
-    </div>
+    </body>
   );
 }
 
