@@ -1,5 +1,12 @@
-import { Navbar } from '~/components/navbar';
+import { AdvancedSearch } from "~/components/advancedsearch";
+import { EasySearch } from "~/components/easysearch";
 
-export default function Search() {
-  return <h1>search</h1>;
+export default function SearchPage() {
+  return(
+    <main>
+      <h1>Hello</h1>
+      <EasySearch />
+      <AdvancedSearch />
+    </main>
+  );
 }
