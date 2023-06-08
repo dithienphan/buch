@@ -1,45 +1,19 @@
+@import "variables";
 @import "navbar";
 
-$primary_background_colour: white;
-$secondary_background_colour: grey;
-
-$primary_colour: black;
-$secondary_colour: blue;
-$error_Colour: red;
-
+//Elements
 h1{
-    color: $primary_colour;
-    background-color: $secondary_background_colour;
+  color: $primary_colour;
+  background-color: $secondary_background_colour;
+  width: 100%
 }
 
-nav {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    ul {
-      text-align: center;
-      list-style-type: none;
-      list-style-type: none;
-      margin: 0;
-      padding: 15px;
-      li {
-        display: inline;
-        font-family: "Fira Sans", sans-serif;
-        font-size: 17px;
-        a {
-          color: #f2f2f2;
-          text-decoration: none;
-          padding: 14px;
-          &:hover {
-            background-color: #111;
-          }
-        }
-      }
-    }
-  }
+h2{
+  color: $thirth_colour;
+  background-color: $secondary_background_colour;
+  width: 100%
+}
 
-  body{
-    padding-top: 10px;
-  }
+body {
+  padding-top: 10px;
+}
