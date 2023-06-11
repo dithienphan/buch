@@ -24,6 +24,7 @@
     "@remix-run/server-runtime": "latest",
     "bcryptjs": "latest",
     "isbot": "3.6.10",
+    "prettier": "2.8.8",
     "prisma": "latest",
     "react": "latest",
     "react-dom": "latest",
