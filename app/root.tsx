@@ -12,8 +12,7 @@ import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import theme from './src/theme';
 import ClientStyleContext from './src/ClientStyleContext';
-import Layout from './src/Layout';
-import { Navbar } from './components/navbar';
+import Layout from './src/routes/Layout';
 
 interface DocumentProps {
   children: React.ReactNode;
@@ -41,7 +40,7 @@ const Document = withEmotionCache(
     }, []);
 
     return (
-      <html lang="en">
+      <html lang="de-DE">
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -59,9 +58,6 @@ const Document = withEmotionCache(
           />
         </head>
         <body>
-          <nav>
-            <Navbar />
-          </nav>
           {children}
           <ScrollRestoration />
           <Scripts />

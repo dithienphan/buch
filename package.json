@@ -29,7 +29,6 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "latest",
-    "remix": "1.17.0",
     "tiny-invariant": "latest",
     "zod": "latest"
   },
