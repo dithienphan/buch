@@ -1,5 +1,3 @@
-import homeStyles from '~/styles/index.css';
-
 export default function HomeDefaut() {
   return (
     <body>
@@ -8,8 +6,4 @@ export default function HomeDefaut() {
       </main>
     </body>
   );
-}
-
-export function links() {
-  return [{ rel: 'stylesheet', href: homeStyles }];
 }
