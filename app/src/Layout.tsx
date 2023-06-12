@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <NavBar />
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Box sx={{ my: 4, alignItems: 'stretch' }}>
           {children}
           <ProTip />

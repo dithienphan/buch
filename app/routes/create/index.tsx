@@ -4,7 +4,6 @@ import {
   TextField,
   Button,
   Checkbox,
-  RadioGroup,
   Select,
   MenuItem,
   SelectChangeEvent,
@@ -12,7 +11,6 @@ import {
   FormControl,
   Grid,
   Box,
-  FormGroup,
   FormControlLabel,
 } from '@mui/material';
 
@@ -58,23 +56,27 @@ export default function Create() {
   return (
     <React.Fragment>
       <Grid
-        rowSpacing={0}
+        rowSpacing={1}
         columnSpacing={6}
         container
         my={2}
         alignContent={'center'}
       >
         <Grid item xs={12}>
-          <Box p={1}>
+          <Box p={0}>
             <Typography variant="h4" component="h1" gutterBottom>
               Neues Buch Anlegen
             </Typography>
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               id="ISBN"
               label="ISBN"
               type="text"
@@ -83,7 +85,7 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <FormControl
               variant="outlined"
               sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
@@ -105,7 +107,7 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <FormControl
               variant="outlined"
               sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
@@ -124,9 +126,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="number"
               label="Preis"
               variant="outlined"
@@ -134,9 +140,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="number"
               label="Rabatt"
               variant="outlined"
@@ -144,9 +154,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="bool"
               label="Lieferbar"
               variant="outlined"
@@ -154,9 +168,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="text"
               label="Datum"
               variant="outlined"
@@ -164,7 +182,7 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <FormControl
               variant="outlined"
               sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
@@ -183,32 +201,38 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={2}>
-          <Box p={1}>
+          <Box p={0}>
             <FormControlLabel
+              sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
               control={<Checkbox defaultChecked />}
               label="Javascript"
             />
           </Box>
         </Grid>
         <Grid item xs={2}>
-          <Box p={1}>
+          <Box p={0}>
             <FormControlLabel
+              sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
               control={<Checkbox defaultChecked />}
               label="Typescript"
             />
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Box p={1}>
+          <Box p={0}>
             <Typography variant="h6" component="h2" margin="5px" gutterBottom>
               Titel
             </Typography>
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="text"
               label="Titel"
               variant="outlined"
@@ -216,9 +240,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="text"
               label="Untertitel"
               variant="outlined"
@@ -226,16 +254,20 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Box p={1}>
+          <Box p={0}>
             <Typography variant="h6" component="h2" margin="5px" gutterBottom>
               Abbildung
             </Typography>
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="text"
               label="Beschriftung"
               variant="outlined"
@@ -243,9 +275,13 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box p={1}>
+          <Box p={0}>
             <TextField
-              style={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
+              style={{
+                display: 'flex',
+                boxSizing: 'border-box',
+                margin: '5px',
+              }}
               type="text"
               label="ContentType"
               variant="outlined"
@@ -253,7 +289,7 @@ export default function Create() {
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Box p={1}>
+          <Box p={0}>
             <Button variant="contained" color="primary">
               save
             </Button>

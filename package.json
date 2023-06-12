@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "@emotion/cache": "latest",
-    "@emotion/react": "latest",
+    "@emotion/react": "11.11.1",
     "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/material": "latest",
+    "@emotion/styled": "11.11.0",
+    "@mui/icons-material": "5.11.16",
+    "@mui/material": "5.13.5",
     "@remix-run/node": "latest",
     "@remix-run/react": "latest",
     "@remix-run/serve": "latest",
@@ -28,9 +29,9 @@
     "@remix-run/dev": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest",
     "eslint": "latest",
-    "prettier": "2.8.8"
+    "prettier": "2.8.8",
+    "typescript": "latest"
   },
   "engines": {
     "node": ">=14"
