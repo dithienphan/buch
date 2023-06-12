@@ -1,5 +1,4 @@
 import { AppBar, Toolbar, Typography, Button, Stack } from '@mui/material';
-import { Link } from '@remix-run/react';
 
 export const NavBar = () => {
   return (
