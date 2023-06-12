@@ -57,12 +57,22 @@ export default function Create() {
 
   return (
     <React.Fragment>
-      <Box sx={{ flexGrow: 1 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Neues Buch Anlegen
-        </Typography>
-        <form>
-          <Grid>
+      <Grid
+        rowSpacing={0}
+        columnSpacing={0}
+        container
+        my={2}
+        alignContent={'center'}
+      >
+        <Grid item xs={12}>
+          <Box p={1}>
+            <Typography variant="h4" component="h1" gutterBottom>
+              Neues Buch Anlegen
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               id="ISBN"
@@ -70,11 +80,15 @@ export default function Create() {
               type="text"
               variant="outlined"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <FormControl
               variant="outlined"
               sx={{ width: '400px', margin: '5px' }}
             >
-              <InputLabel id="Age">Age</InputLabel>
+              <InputLabel id="Rating">Rating</InputLabel>
               <Select
                 id="Rating"
                 label="Rating"
@@ -88,8 +102,10 @@ export default function Create() {
                 <MenuItem value={5}>5</MenuItem>
               </Select>
             </FormControl>
-          </Grid>
-          <Grid>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <FormControl
               variant="outlined"
               sx={{ width: '400px', margin: '5px' }}
@@ -105,39 +121,55 @@ export default function Create() {
                 <MenuItem value={'DRUCKAUSGABE'}>Druckausgabe</MenuItem>
               </Select>
             </FormControl>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="number"
               label="Preis"
               variant="outlined"
             />
-          </Grid>
-          <Grid>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="number"
               label="Rabatt"
               variant="outlined"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="bool"
               label="Lieferbar"
               variant="outlined"
             />
-          </Grid>
-          <Grid>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="text"
               label="Datum"
               variant="outlined"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <FormControl
               variant="outlined"
               sx={{ width: '400px', margin: '5px' }}
             >
-              <InputLabel id="schlagwoerter">Schlagwoerter</InputLabel>
+              <InputLabel id="schlagwoerter">Schlagwörter</InputLabel>
               <Select
                 id="Schlagwoerter"
                 label="Schlagwoerter"
@@ -148,57 +180,86 @@ export default function Create() {
                 <MenuItem value={'TYPESCRIPT'}>Typescript</MenuItem>
               </Select>
             </FormControl>
-          </Grid>
-          <Grid margin={'5px'}>
+          </Box>
+        </Grid>
+        <Grid item xs={2}>
+          <Box p={1}>
             <FormControlLabel
               control={<Checkbox defaultChecked />}
               label="Javascript"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={2}>
+          <Box p={1}>
             <FormControlLabel
               control={<Checkbox defaultChecked />}
               label="Typescript"
             />
-          </Grid>
-
-          <Grid>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box p={1}>
             <Typography variant="h6" component="h2" margin="5px" gutterBottom>
               Titel
             </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="text"
               label="Titel"
               variant="outlined"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="text"
               label="Untertitel"
               variant="outlined"
             />
-          </Grid>
-          <Grid>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box p={1}>
             <Typography variant="h6" component="h2" margin="5px" gutterBottom>
               Abbildung
             </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="text"
               label="Beschriftung"
               variant="outlined"
             />
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box p={1}>
             <TextField
               style={{ width: '400px', margin: '5px' }}
               type="text"
               label="ContentType"
               variant="outlined"
             />
-          </Grid>
-          <Button variant="contained" color="primary">
-            save
-          </Button>
-        </form>
-      </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box p={1}>
+            <Button variant="contained" color="primary">
+              save
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }
