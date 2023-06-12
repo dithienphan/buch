@@ -1,3 +1,5 @@
+import type { ActionArgs } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import * as React from 'react';
 import {
   Typography,
@@ -12,6 +14,7 @@ import {
   Grid,
   Box,
   FormControlLabel,
+  Rating,
 } from '@mui/material';
 
 const art = [
@@ -298,4 +301,17 @@ export default function Create() {
       </Grid>
     </React.Fragment>
   );
+}
+
+export async function action({ request }: ActionArgs) {
+  const body = await request.formData();
+  validateIsbn(ISBN);
+
+  return;
+}
+
+function validateIsbn(isbn: string) {
+  if (isbn.length < 9) {
+    return `The name is too short`;
+  }
 }
