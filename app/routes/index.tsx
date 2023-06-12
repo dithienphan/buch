@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { Link } from '@remix-run/react';
+import type { MetaFunction } from 'remix';
+import { Link } from 'remix';
 import Typography from '@mui/material/Typography';
 
 // https://remix.run/api/conventions#meta
-export function meta() {
+export const meta: MetaFunction = () => {
   return {
-    title: 'Start',
-    description: '...',
-    'og:title': '...',
+    title: 'Remix Starter',
+    description: 'Welcome to remix!',
   };
-}
+};
 
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
