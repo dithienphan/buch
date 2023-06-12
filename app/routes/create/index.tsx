@@ -1,5 +1,5 @@
-import type { ActionArgs } from "@remix-run/node";
-import { json, redirect } from "@remix-run/node";
+import type { ActionArgs } from '@remix-run/node';
+import { json, redirect } from '@remix-run/node';
 import * as React from 'react';
 import {
   Typography,
