@@ -51,7 +51,7 @@ export default function Search() {
         <Grid item xs={12}>
           <Box p={0}>
             <Button variant="contained" color="primary">
-              save
+              Suche
             </Button>
           </Box>
         </Grid>
