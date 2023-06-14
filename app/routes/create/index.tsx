@@ -16,6 +16,9 @@ import {
   FormControlLabel,
   Rating,
   RadioGroup,
+  Radio,
+  FormLabel,
+  FormGroup,
 } from '@mui/material';
 
 const art = [
@@ -165,7 +168,6 @@ export default function Create() {
             />
           </Box>
         </Grid>
-
         <Grid item xs={6}>
           <Box p={0}>
             <TextField
@@ -249,46 +251,38 @@ export default function Create() {
             </FormControl>
           </Box>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Box p={0}>
-            <TextField
-              style={{
-                display: 'flex',
-                boxSizing: 'border-box',
-                margin: '5px',
-              }}
-              type="bool"
-              label="Lieferbar"
-              variant="outlined"
-            />
-          </Box>
-          <Grid item xs={12}>
-            <Box p={0}>
-              <Typography variant="h6" component="h2" margin="5px" gutterBottom>
-                Titel
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-        <Grid item xs={2}>
-          <Box p={0}>
-            <FormControlLabel
-              sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
-              control={<Checkbox defaultChecked />}
-              label="Javascript"
-            />
+            <FormControl>
+              <FormLabel id="Lieferbar">Lieferbar</FormLabel>
+              <RadioGroup aria-labelledby="lieferbar" name="lieferbar">
+                <FormControlLabel value="true" control={<Radio />} label="Ja" />
+                <FormControlLabel
+                  value="false"
+                  control={<Radio />}
+                  label="Nein"
+                />
+              </RadioGroup>
+            </FormControl>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <Box p={0}>
-            <FormControlLabel
-              sx={{ display: 'flex', boxSizing: 'border-box', margin: '5px' }}
-              control={<Checkbox defaultChecked />}
-              label="Typescript"
-            />
+            <FormLabel component="legend">Schlagwörter</FormLabel>
+            <FormGroup>
+              <FormControlLabel
+                sx={{ display: 'flex', boxSizing: 'border-box' }}
+                control={<Checkbox defaultChecked />}
+                label="Javascript"
+              />
+              <FormControlLabel
+                sx={{ display: 'flex', boxSizing: 'border-box' }}
+                control={<Checkbox defaultChecked />}
+                label="Typescript"
+              />
+            </FormGroup>
           </Box>
         </Grid>
-
         <Grid item xs={12}>
           <Box p={0}>
             <Button variant="contained" color="primary">
