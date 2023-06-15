@@ -1,11 +1,13 @@
 {
+  "name": "buchweb",
   "private": true,
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
     "start": "remix-serve build",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "revealjs": "asciidoctor-revealjs .extras/doc/folien.adoc"
   },
   "dependencies": {
     "@emotion/react": "11.11.0",
@@ -24,6 +26,9 @@
     "sass": "1.62.1"
   },
   "devDependencies": {
+    "asciidoctor": "3.0.0-rc.2",
+    "@asciidoctor/reveal.js": "5.0.0-rc.1",
+    "asciidoctor-kroki": "0.17.0",
     "@remix-run/dev": "^1.16.1",
     "@remix-run/eslint-config": "^1.16.1",
     "@types/react": "^18.0.35",
