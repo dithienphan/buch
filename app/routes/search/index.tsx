@@ -14,6 +14,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
+import {DynamicTable} from '../../src/table';
 
 export default function Search() {
   return (
@@ -79,22 +80,7 @@ export default function Search() {
       >
         <Grid item xs={12}>
           <Box>
-            <List>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemText 
-                  primary="List item 1" 
-                  secondary="Secondary text"/>
-                </ListItemButton>
-              </ListItem>
-              <Divider />
-              <ListItem>
-                <ListItemText
-                  primary="List item 2"
-                  secondary="Secondary text"
-                />
-              </ListItem>
-            </List>
+          <DynamicTable/>
           </Box>
         </Grid>
       </Grid>
