@@ -41,10 +41,10 @@ export const DynamicTable = () => {
             <TableCell>{row.art}</TableCell>
             <TableCell>{row.preis}</TableCell>
             <TableCell>{row.rabatt}</TableCell>
-            <TableCell>{row.lieferbar}</TableCell>
+            <TableCell>{row.lieferbar.toString()}</TableCell>
             <TableCell>{row.datum}</TableCell>
             <TableCell>{row.homepage}</TableCell>
-            <TableCell>{row.schlagwoerter}</TableCell>
+            <TableCell>{row.schlagwoerter.toString()}</TableCell>
             <TableCell>{row.titel.titel}</TableCell>
             <TableCell>{row.titel.untertitel}</TableCell>
             <TableCell>{row.abbildungen[0].beschriftung}</TableCell>
