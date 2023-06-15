@@ -1,5 +1,19 @@
 import * as React from 'react';
-import { TextField, Button, Grid, Box, Typography } from '@mui/material';
+import {
+  TextField,
+  Button,
+  Grid,
+  Box,
+  Typography,
+  List,
+  ListItemIcon,
+  ListItemButton,
+  ListItem,
+  Avatar,
+  Divider,
+  ListItemAvatar,
+  ListItemText,
+} from '@mui/material';
 
 export default function Search() {
   return (
@@ -42,7 +56,7 @@ export default function Search() {
                 margin: '1px',
               }}
               id="ID"
-              label="id"
+              label="ID"
               type="text"
               variant="outlined"
             />
@@ -53,6 +67,34 @@ export default function Search() {
             <Button variant="contained" color="primary">
               Suche
             </Button>
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid
+        rowSpacing={1}
+        columnSpacing={6}
+        container
+        my={0}
+        alignContent={'center'}
+      >
+        <Grid item xs={12}>
+          <Box>
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemText 
+                  primary="List item 1" 
+                  secondary="Secondary text"/>
+                </ListItemButton>
+              </ListItem>
+              <Divider />
+              <ListItem>
+                <ListItemText
+                  primary="List item 2"
+                  secondary="Secondary text"
+                />
+              </ListItem>
+            </List>
           </Box>
         </Grid>
       </Grid>
