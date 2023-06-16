@@ -9,6 +9,7 @@ function ContentType() {
         margin: '5px',
       }}
       type="text"
+      id="ContentType"
       label="ContentType"
       variant="outlined"
     />

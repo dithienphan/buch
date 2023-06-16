@@ -9,6 +9,7 @@ function Rabatt() {
         margin: '5px',
       }}
       type="number"
+      id="Rabatt"
       label="Rabatt"
       variant="outlined"
     />

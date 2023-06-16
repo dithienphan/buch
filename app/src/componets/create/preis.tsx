@@ -9,6 +9,7 @@ function Preis() {
         margin: '5px',
       }}
       type="number"
+      id="Preis"
       label="Preis"
       variant="outlined"
     />

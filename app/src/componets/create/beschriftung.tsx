@@ -9,6 +9,7 @@ function Beschriftung() {
         margin: '5px',
       }}
       type="text"
+      id="Beschriftung"
       label="Beschriftung"
       variant="outlined"
     />
