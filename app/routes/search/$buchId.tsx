@@ -1,12 +1,11 @@
 import * as React from 'react';
+import Detail from '~/src/componets/search/detail';
 import Typography from '@mui/material/Typography';
 
-export default function Detail() {
+export default function ViewDetail() {
   return (
     <React.Fragment>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Detail
-      </Typography>
+      <Detail></Detail>
     </React.Fragment>
   );
 }

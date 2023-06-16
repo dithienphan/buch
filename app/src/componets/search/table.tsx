@@ -6,7 +6,11 @@ import {
   TableRow,
   TableCell,
   Paper,
+  Link,
+  Icon,
+  Button,
 } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 export const DynamicTable = () => {
   return (
@@ -28,6 +32,7 @@ export const DynamicTable = () => {
             <TableCell>Untertitel</TableCell>
             <TableCell>Beschriftung</TableCell>
             <TableCell>ContentType</TableCell>
+            <TableCell></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -50,6 +55,11 @@ export const DynamicTable = () => {
               <TableCell>{row.titel.untertitel}</TableCell>
               <TableCell>{row.abbildungen[0].beschriftung}</TableCell>
               <TableCell>{row.abbildungen[0].contentType}</TableCell>
+              <TableCell>
+                <Button href='http://localhost:3000/search/{row.id}'>
+                  <Icon><SearchIcon></SearchIcon></Icon>
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
