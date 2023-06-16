@@ -14,7 +14,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
-import {DynamicTable} from '../../src/componets/search/table';
+import { DynamicTable } from '../../src/componets/search/table';
 
 export default function Search() {
   return (
@@ -80,7 +80,7 @@ export default function Search() {
       >
         <Grid item xs={12}>
           <Box>
-          <DynamicTable/>
+            <DynamicTable />
           </Box>
         </Grid>
       </Grid>

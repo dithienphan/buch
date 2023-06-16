@@ -5,13 +5,13 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Paper
-} from '@mui/material'
+  Paper,
+} from '@mui/material';
 
 export const DynamicTable = () => {
   return (
     <TableContainer component={Paper}>
-      <Table stickyHeader aria-label='simple table'>
+      <Table stickyHeader aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Id</TableCell>
@@ -31,32 +31,32 @@ export const DynamicTable = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {tableData.map(row => (
+          {tableData.map((row) => (
             <TableRow
               key={row.id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
               <TableCell>{row.id}</TableCell>
-            <TableCell>{row.isbn}</TableCell>
-            <TableCell>{row.rating}</TableCell>
-            <TableCell>{row.art}</TableCell>
-            <TableCell>{row.preis}</TableCell>
-            <TableCell>{row.rabatt}</TableCell>
-            <TableCell>{row.lieferbar.toString()}</TableCell>
-            <TableCell>{row.datum}</TableCell>
-            <TableCell>{row.homepage}</TableCell>
-            <TableCell>{row.schlagwoerter.toString()}</TableCell>
-            <TableCell>{row.titel.titel}</TableCell>
-            <TableCell>{row.titel.untertitel}</TableCell>
-            <TableCell>{row.abbildungen[0].beschriftung}</TableCell>
-            <TableCell>{row.abbildungen[0].contentType}</TableCell>
-              
+              <TableCell>{row.isbn}</TableCell>
+              <TableCell>{row.rating}</TableCell>
+              <TableCell>{row.art}</TableCell>
+              <TableCell>{row.preis}</TableCell>
+              <TableCell>{row.rabatt}</TableCell>
+              <TableCell>{row.lieferbar.toString()}</TableCell>
+              <TableCell>{row.datum}</TableCell>
+              <TableCell>{row.homepage}</TableCell>
+              <TableCell>{row.schlagwoerter.toString()}</TableCell>
+              <TableCell>{row.titel.titel}</TableCell>
+              <TableCell>{row.titel.untertitel}</TableCell>
+              <TableCell>{row.abbildungen[0].beschriftung}</TableCell>
+              <TableCell>{row.abbildungen[0].contentType}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-  )
-}
+  );
+};
 
 const tableData = [
   {
