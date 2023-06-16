@@ -23,7 +23,9 @@
     "@remix-run/server-runtime": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "remix": "latest"
+    "remix": "latest",
+    "remix-validated-form": "5.0.1",
+    "yup": "1.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "latest",

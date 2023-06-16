@@ -6,6 +6,7 @@ import Create from '~/src/componets/create';
 export default function ViewCreate() {
   return (
     <React.Fragment>
+      <form action=""></form>
       <Create></Create>
     </React.Fragment>
   );

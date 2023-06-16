@@ -8,10 +8,11 @@ function Preis() {
         boxSizing: 'border-box',
         margin: '5px',
       }}
-      type="number"
+      type="text"
       id="Preis"
       label="Preis"
       variant="outlined"
+      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*.[0-9]*' }} 
     />
   );
 }

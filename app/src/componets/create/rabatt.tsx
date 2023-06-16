@@ -8,10 +8,11 @@ function Rabatt() {
         boxSizing: 'border-box',
         margin: '5px',
       }}
-      type="number"
+      type="text"
       id="Rabatt"
       label="Rabatt"
       variant="outlined"
+      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*.[0-9]*' }} 
     />
   );
 }

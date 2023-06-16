@@ -8,7 +8,7 @@ function Datum() {
         boxSizing: 'border-box',
         margin: '5px',
       }}
-      type="text"
+      type="date"
       id="Datum"
       label="Datum"
       variant="outlined"
