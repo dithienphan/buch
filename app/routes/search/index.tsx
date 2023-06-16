@@ -14,7 +14,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
-import {DynamicTable} from '../../src/table';
+import {DynamicTable} from '../../src/componets/search/table';
 
 export default function Search() {
   return (
