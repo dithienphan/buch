@@ -16,11 +16,8 @@ export default function Index() {
   return (
     <React.Fragment>
       <Typography variant="h4" component="h1" gutterBottom>
-        Material UI Remix in TypeScript example
+        Willkommen zu den Büchern
       </Typography>
-      <Link to="/about" color="secondary">
-        Go to the about page
-      </Link>
     </React.Fragment>
   );
 }
