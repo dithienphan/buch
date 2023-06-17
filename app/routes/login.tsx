@@ -4,8 +4,6 @@ import { TextField, Button, Grid, Box, Typography } from '@mui/material';
 export default function Login() {
   const [count, setCount] = React.useState(0);
 
-  React.useEffect(() => alert('hello'));
-
   return (
     <React.Fragment>
       <Grid
@@ -18,12 +16,7 @@ export default function Login() {
         <Grid item xs={12}>
           <Box p={0}>
             <Typography variant="h4" component="h1" gutterBottom>
-              Buch Suchen
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              {count}
+              Login: {count}
             </Typography>
           </Box>
         </Grid>
