@@ -10,7 +10,6 @@ import {
 } from '@remix-run/react';
 import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
-import theme from './src/layout/theme';
 import ClientStyleContext from './src/ClientStyleContext';
 import Layout from './src/layout/Layout';
 
@@ -44,7 +43,6 @@ const Document = withEmotionCache(
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <meta name="theme-color" content={theme.palette.primary.main} />
           {title ? <title>{title}</title> : null}
           <Meta />
           <Links />
