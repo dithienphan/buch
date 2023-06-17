@@ -46,6 +46,12 @@ export default function Search() {
               type="text"
               variant="outlined"
             />
+            <button
+        type="button"
+        onClick={() => alert("I has JS loaded!")}
+      >
+        Try me!
+      </button>
           </Box>
         </Grid>
         <Grid item xs={6}>

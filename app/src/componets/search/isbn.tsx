@@ -2,19 +2,21 @@ import { TextField } from '@mui/material';
 import { useState } from 'react';
 
 function ISBN() {
-  let [IsbnField, setIsbnField] = useState("");
-  console.log("Re-Rendered");
+  const [tfValue, setTFValue] = useState("My Text");
 
-  function handleIsbn(event: React.ChangeEvent<HTMLInputElement>) {
-    setIsbnField((complete) => {
-      if (complete) {
-        return false;
-      }
-      return complete;
-    });
-  }
+  console.log("Hello World");
+
+  // function handleIsbn(event: React.ChangeEvent<HTMLInputElement>) {
+  //   setIsbnField((complete) => {
+  //     if (complete) {
+  //       return false;
+  //     }
+  //     return complete;
+  //   });
+  // }
 
   return (
+    <div>
     <TextField
       style={{
         display: 'flex',
@@ -26,8 +28,10 @@ function ISBN() {
       name = "IsbnField"
       type="text"
       variant="outlined"
-      onChange={handleIsbn}
     />
+    <TextField
+ onChange={(newValue) => setTFValue(newValue.target.value)} />
+ </div>
   );
 }
 
