@@ -36,13 +36,7 @@ export default function Search() {
         </Grid>
         <Grid item xs={6}>
           <Box p={0}>
-          <Isbn></Isbn>
-            <button
-        type="button"
-        onClick={() => alert("I has JS loaded!")}
-      >
-        Try me!
-      </button>
+            <Isbn></Isbn>
           </Box>
         </Grid>
         <Grid item xs={6}>
