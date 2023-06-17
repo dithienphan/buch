@@ -12,7 +12,7 @@ function Preis() {
       id="Preis"
       label="Preis"
       variant="outlined"
-      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*.[0-9]*' }} 
+      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*.[0-9]*' }}
     />
   );
 }

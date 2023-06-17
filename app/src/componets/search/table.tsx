@@ -56,8 +56,10 @@ export const DynamicTable = () => {
               <TableCell>{row.abbildungen[0].beschriftung}</TableCell>
               <TableCell>{row.abbildungen[0].contentType}</TableCell>
               <TableCell>
-                <Button href='http://localhost:3000/search/{row.id}'>
-                  <Icon><SearchIcon></SearchIcon></Icon>
+                <Button href="http://localhost:3000/search/{row.id}">
+                  <Icon>
+                    <SearchIcon></SearchIcon>
+                  </Icon>
                 </Button>
               </TableCell>
             </TableRow>

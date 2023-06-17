@@ -10,7 +10,6 @@ function Datum() {
       }}
       type="date"
       id="Datum"
-      label="Datum"
       variant="outlined"
     />
   );

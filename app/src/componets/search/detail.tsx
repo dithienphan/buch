@@ -1,9 +1,5 @@
-import { Grid, Box, Typography, Stack, TextField, Button, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select } from '@mui/material';
-import Schlagwoerter from '../create/schlagwoerter';
+import { Grid, Typography } from '@mui/material';
 import Buch from './buch.json';
-import art from '../create/art';
-import rating from '../create/rating';
-import schlagwoerter from '../create/schlagwoerter';
 
 export function Detail() {
   return (
@@ -15,88 +11,129 @@ export function Detail() {
       alignContent={'center'}
     >
       <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              {Buch.titel.titel}
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              {Buch.titel.untertitel}
-            </Typography>
-          </Box>
-        </Stack>
+        <Typography variant="h3" component="h1" gutterBottom>
+          {Buch.titel.titel}
+        </Typography>
+        <Typography variant="h4" component="h1" gutterBottom>
+          {Buch.titel.untertitel}
+        </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h5" component="h1" gutterBottom>
-              {Buch.abbildungen[0].beschriftung}
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h6" component="h1" gutterBottom>
-              {Buch.abbildungen[0].contentType}
-            </Typography>
-          </Box>
-        </Stack>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          ID:
+        </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h5" component="h1" gutterBottom>
-              ISBN
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h6" component="h1" gutterBottom>
-              {Buch.isbn}
-            </Typography>
-          </Box>
-        </Stack>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.id}
+        </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h5" component="h1" gutterBottom>
-              ID:
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h6" component="h1" gutterBottom>
-              {Buch.id}
-            </Typography>
-          </Box>
-        </Stack>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          ISBN:
+        </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h5" component="h1" gutterBottom>
-              Rating:
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h6" component="h1" gutterBottom>
-              {Buch.rating}
-            </Typography>
-          </Box>
-        </Stack>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.isbn}
+        </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Stack direction={'row'} spacing={2}>
-          <Box p={0}>
-            <Typography variant="h5" component="h1" gutterBottom>
-              Art:
-            </Typography>
-          </Box>
-          <Box p={0}>
-            <Typography variant="h6" component="h1" gutterBottom>
-              {Buch.art}
-            </Typography>
-          </Box>
-        </Stack>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Rating:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.rating}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Art:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.art}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Lieferbar:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.lieferbar.toString()}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Datum:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.datum}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Homepage:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.homepage}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Schlagwörter:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.schlagwoerter.toString()}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Preis:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.preis}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Rabatt:
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.rabatt}
+        </Typography>
+      </Grid>
+
+
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          Abbildungen:
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.abbildungen[0].beschriftung}
+        </Typography>
+      </Grid>
+      <Grid item xs={2}>
+        <Typography variant="h5" component="h1" gutterBottom>
+          {Buch.abbildungen[0].contentType}
+        </Typography>
       </Grid>
     </Grid>
   );
