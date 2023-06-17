@@ -6,13 +6,12 @@ import {
   TableRow,
   TableCell,
   Paper,
-  Link,
   Icon,
   Button,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-export const DynamicTable = () => {
+export function DynamicTable() {
   return (
     <TableContainer component={Paper}>
       <Table stickyHeader aria-label="simple table">
@@ -292,3 +291,5 @@ const tableData = [
     ],
   },
 ];
+
+export default DynamicTable;
