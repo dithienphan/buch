@@ -15,6 +15,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import { DynamicTable } from '../../src/componets/search/table';
+import  Isbn  from '~/src/componets/search/isbn';
 
 export default function Search() {
   return (
@@ -35,17 +36,7 @@ export default function Search() {
         </Grid>
         <Grid item xs={6}>
           <Box p={0}>
-            <TextField
-              style={{
-                display: 'flex',
-                boxSizing: 'border-box',
-                margin: '1px',
-              }}
-              id="ISBN"
-              label="ISBN"
-              type="text"
-              variant="outlined"
-            />
+          <Isbn></Isbn>
             <button
         type="button"
         onClick={() => alert("I has JS loaded!")}

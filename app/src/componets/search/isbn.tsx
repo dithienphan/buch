@@ -1,10 +1,18 @@
 import { TextField } from '@mui/material';
 import { useState } from 'react';
 
-function ISBN() {
-  const [tfValue, setTFValue] = useState("My Text");
+function Isbn() {
+  // const [tfValue, setTFValue] = useState("My Text");
 
   console.log("Hello World");
+
+  const handleTextFieldChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, extra: string) => {
+    if (event.target.value === 'a') {
+      console.log(extra);
+    }
+    console.log(event.target.value);
+    console.log(extra);
+  }
 
   // function handleIsbn(event: React.ChangeEvent<HTMLInputElement>) {
   //   setIsbnField((complete) => {
@@ -16,7 +24,6 @@ function ISBN() {
   // }
 
   return (
-    <div>
     <TextField
       style={{
         display: 'flex',
@@ -24,15 +31,13 @@ function ISBN() {
         margin: '5px',
       }}
       id="Isbn"
-      placeholder="ISBN"
+      label="Isbn"
       name = "IsbnField"
       type="text"
       variant="outlined"
-    />
-    <TextField
- onChange={(newValue) => setTFValue(newValue.target.value)} />
- </div>
+      onChange={(event) => handleTextFieldChange(event, 'extra prop')}
+/>
   );
 }
 
-export default ISBN;
+export default Isbn;
