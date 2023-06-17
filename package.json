@@ -21,9 +21,12 @@
     "@remix-run/react": "latest",
     "@remix-run/serve": "latest",
     "@remix-run/server-runtime": "latest",
+    "isbot": "3.6.10",
+    "pretty-cache-header": "1.0.0",
     "react": "latest",
     "react-dom": "latest",
     "remix": "latest",
+    "remix-utils": "6.4.1",
     "remix-validated-form": "5.0.1",
     "yup": "1.2.0"
   },
