@@ -33,9 +33,9 @@ const hydrate = () => {
     ReactDOM.hydrateRoot(
       document,
       <ClientCacheProvider>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <RemixBrowser />
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <RemixBrowser />
       </ClientCacheProvider>,
     );
   });

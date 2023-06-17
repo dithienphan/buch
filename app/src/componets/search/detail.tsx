@@ -119,7 +119,6 @@ export function Detail() {
         </Typography>
       </Grid>
 
-
       <Grid item xs={2}>
         <Typography variant="h5" component="h1" gutterBottom>
           Abbildungen:

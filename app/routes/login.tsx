@@ -4,7 +4,7 @@ import { TextField, Button, Grid, Box, Typography } from '@mui/material';
 export default function Login() {
   const [count, setCount] = React.useState(0);
 
-  React.useEffect(() => alert('hello'))
+  React.useEffect(() => alert('hello'));
 
   return (
     <React.Fragment>
@@ -59,7 +59,11 @@ export default function Login() {
         </Grid>
         <Grid item xs={12}>
           <Box p={0}>
-            <Button variant="contained" color="primary" onClick={() => setCount(count + 1)}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => setCount(count + 1)}
+            >
               Anmelden
             </Button>
           </Box>

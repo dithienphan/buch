@@ -67,7 +67,7 @@ export function DynamicTable() {
       </Table>
     </TableContainer>
   );
-};
+}
 
 const tableData = [
   {

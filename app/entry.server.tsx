@@ -20,9 +20,9 @@ export default function handleRequest(
   function MuiRemixServer() {
     return (
       <CacheProvider value={cache}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <RemixServer context={remixContext} url={request.url} />
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <RemixServer context={remixContext} url={request.url} />
       </CacheProvider>
     );
   }
