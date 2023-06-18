@@ -8,7 +8,6 @@ function ISBN() {
         boxSizing: 'border-box',
         margin: '5px',
       }}
-      id="ISBN"
       label="ISBN"
       type="text"
       variant="outlined"

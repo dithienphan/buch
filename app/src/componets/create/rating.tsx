@@ -20,7 +20,6 @@ function Rating() {
     >
       <InputLabel id="Rating">Rating</InputLabel>
       <Select
-        id="Rating"
         label="Rating"
         value={rating}
         onChange={handleChangeRating}

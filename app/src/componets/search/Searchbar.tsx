@@ -25,7 +25,6 @@ function Searchbar() {
               boxSizing: 'border-box',
               margin: '1px',
             }}
-            id="ISBN"
             label="ISBN"
             type="text"
             variant="outlined"
@@ -40,7 +39,6 @@ function Searchbar() {
               boxSizing: 'border-box',
               margin: '1px',
             }}
-            id="ID"
             label="ID"
             type="text"
             variant="outlined"

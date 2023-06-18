@@ -1,8 +1,43 @@
 import * as React from 'react';
 import { TextField, Button, Grid, Box, Typography } from '@mui/material';
+import type { MetaFunction } from '@remix-run/node';
 
 export default function Login() {
   const [count, setCount] = React.useState(0);
+
+
+
+async function getCharacters() {
+  const fetch = require('node-fetch');
+  const https = require('https');
+
+  const httpsAgent = new https.Agent({
+    rejectUnauthorized: false,
+  });
+    let results = await fetch('https://localhost:3000/graphql', {
+      method: 'POST',
+  
+      headers: {
+        "Content-Type": "application/json"
+      },
+      agent: httpsAgent,
+      body: JSON.stringify({
+        query: `{
+          buch {
+            results {
+              titel {
+                titel
+              }
+            }
+          }
+        }`
+      })
+    })
+    let characters = await results.json();
+    console.log(characters.data)
+  }
+  
+  getCharacters()
 
   return (
     <React.Fragment>
@@ -28,7 +63,6 @@ export default function Login() {
                 boxSizing: 'border-box',
                 margin: '1px',
               }}
-              id="Benutzername"
               label="Benutzername"
               type="text"
               variant="outlined"
@@ -43,7 +77,6 @@ export default function Login() {
                 boxSizing: 'border-box',
                 margin: '1px',
               }}
-              id="Passwort"
               label="Passwort"
               type="text"
               variant="outlined"

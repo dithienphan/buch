@@ -9,7 +9,6 @@ function Datum() {
         margin: '5px',
       }}
       type="date"
-      id="Datum"
       variant="outlined"
     />
   );
