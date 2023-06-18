@@ -5,8 +5,22 @@ import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import ClientStyleContext from './src/ClientStyleContext';
 import createEmotionCache from './src/createEmotionCache';
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 interface ClientCacheProviderProps {
   children: React.ReactNode;
+}
+
+function Client() {
+  const client = new ApolloClient({
+    cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
+    uri: "https://flyby-gateway.herokuapp.com/", // the same uri in our entry.server file
+  });
+
+  return (
+    <ApolloProvider client={client}>
+      <RemixBrowser />
+    </ApolloProvider>
+  );
 }
 function ClientCacheProvider({ children }: ClientCacheProviderProps) {
   const [cache, setCache] = React.useState(createEmotionCache());
@@ -28,14 +42,20 @@ function ClientCacheProvider({ children }: ClientCacheProviderProps) {
 }
 
 const hydrate = () => {
+  const client = new ApolloClient({
+    cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
+    uri: "https://flyby-gateway.herokuapp.com/", // the same uri in our entry.server file
+  });
   React.startTransition(() => {
     ReactDOM.hydrateRoot(
       document,
+      <ApolloProvider client={client}>
       <ClientCacheProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <RemixBrowser />
-      </ClientCacheProvider>,
+      </ClientCacheProvider>
+      </ApolloProvider>,
     );
   });
 };
