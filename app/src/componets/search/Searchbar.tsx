@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { TextField, Button, Grid, Box, Typography } from '@mui/material';
+import Isbn from './isbn';
 
 function Searchbar() {
   return (
@@ -19,17 +20,7 @@ function Searchbar() {
       </Grid>
       <Grid item xs={6}>
         <Box p={0}>
-          <TextField
-            style={{
-              display: 'flex',
-              boxSizing: 'border-box',
-              margin: '1px',
-            }}
-            id="ISBN"
-            label="ISBN"
-            type="text"
-            variant="outlined"
-          />
+          <Isbn></Isbn>
         </Box>
       </Grid>
       <Grid item xs={6}>
