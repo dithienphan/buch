@@ -1,0 +1,27 @@
+@startuml Anlegen
+state Angemeldet {
+  [*] --> Anlegen_verfügbar
+  Anlegen_verfügbar --> Submitbutton_gesperrt: Anlegen auswählen
+
+state Submitbutton_gesperrt{
+  Felder_nicht_korrekt--> Wert_eingegeben : Wert in einem Textfeld eingeben
+  Felder_nicht_korrekt--> Wert_aussgewählt : Wert in einem Feld auswählen
+state Wert_eingegeben {
+     nicht_validiert --> validiert_gültiger_Wert: Validierung
+     nicht_validiert --> validierung_ungültiger_Wert: Validierung
+  }
+Wert_aussgewählt --> Felder_korrekt
+Wert_eingegeben --> Felder_korrekt
+}
+Submitbutton_gesperrt --> Submitbutton_freigegeben: Alle Felder sind korrekt
+Submitbutton_freigegeben --> Formular_abgeschickt: Submitbutton drücken
+Formular_abgeschickt --> [*]
+}
+
+validiert_gültiger_Wert: zeige: grüner Haken
+validierung_ungültiger_Wert: zeige: rotes Kreuz
+Wert_aussgewählt: Radiobutton, Checkboxen, Auswahlliste, ...
+Felder_nicht_korrekt: Pflichfelder nicht ausgefüllt und Felder nicht korrekt
+Submitbutton_gesperrt: verblasst, nicht klickbar
+Submitbutton_freigegeben: hervorgehoben, klickbar
+@enduml
