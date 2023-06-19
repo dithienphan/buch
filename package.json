@@ -1,6 +1,5 @@
 {
-  "name": "material-remix-ts",
-  "version": "5.0.0",
+  "name": "buchweb",
   "private": true,
   "scripts": {
     "build": "remix build",
@@ -8,7 +7,8 @@
     "postinstall": "remix setup node",
     "start": "remix-serve build",
     "typecheck": "tsc",
-    "prettier": "prettier --cache --write \"app/**/*.tsx\""
+    "prettier": "prettier --cache --write \"app/**/*.tsx\"",
+    "revealjs": "asciidoctor-revealjs .extras/doc/folien.adoc"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -29,6 +29,9 @@
     "yup": "1.2.0"
   },
   "devDependencies": {
+    "asciidoctor": "3.0.0-rc.2",
+    "@asciidoctor/reveal.js": "5.0.0-rc.1",
+    "asciidoctor-kroki": "0.17.0",
     "@remix-run/dev": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
