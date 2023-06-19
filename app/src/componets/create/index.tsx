@@ -13,9 +13,8 @@ import Schlagwoerter from './schlagwoerter';
 import React, { useContext } from 'react';
 import { BuchContext } from './createContext';
 
-
 function Create() {
-  const buchContext = useContext(BuchContext)
+  const buchContext = useContext(BuchContext);
   return (
     <Grid
       rowSpacing={1}

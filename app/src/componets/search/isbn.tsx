@@ -4,14 +4,16 @@ import { useState } from 'react';
 function Isbn() {
   // const [tfValue, setTFValue] = useState("My Text");
 
-  console.log("Hello World");
+  console.log('Hello World');
 
-  const isbnValidate = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const isbnValidate = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     console.log(event.target.value);
-    if(event.target.value.length < 3 ){
-      console.log("Brudi viel zu kurz");
+    if (event.target.value.length < 3) {
+      console.log('Brudi viel zu kurz');
     }
-  }
+  };
 
   // function handleIsbn(event: React.ChangeEvent<HTMLInputElement>) {
   //   setIsbnField((complete) => {
@@ -31,11 +33,11 @@ function Isbn() {
       }}
       id="ISBN"
       label="ISBN"
-      name = "IsbnField"
+      name="IsbnField"
       type="text"
       variant="outlined"
       onChange={(event) => isbnValidate(event)}
-/>
+    />
   );
 }
 

@@ -3,14 +3,11 @@ import { useContext } from 'react';
 import { BuchContext } from './createContext';
 
 function Titel() {
-  const buchContext = useContext(BuchContext)
+  const buchContext = useContext(BuchContext);
   const handleTitel = () => {
     // if (userContext) {
-    buchContext.setBuch({ ...buchContext, 
-      titel: 'T',
-      untertitel: 'U'
-    }) 
-  }
+    buchContext.setBuch({ ...buchContext, titel: 'T', untertitel: 'U' });
+  };
   return (
     <TextField
       style={{
