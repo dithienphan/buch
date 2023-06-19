@@ -12,7 +12,6 @@ function Titel() {
     }) 
   }
   return (
-    <input value={BuchContext.titel}>
     <TextField
       style={{
         display: 'flex',
@@ -25,7 +24,6 @@ function Titel() {
       variant="outlined"
       onChange={handleTitel}
     />
-    </input>
   );
 }
 
