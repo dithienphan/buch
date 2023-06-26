@@ -10,8 +10,12 @@ import ISBN from './isbn';
 import Preis from './preis';
 import Rabatt from './rabatt';
 import Schlagwoerter from './schlagwoerter';
+import React, { useContext } from 'react';
+import { BuchContext } from './createContext';
+
 
 function Create() {
+  const buchContext = useContext(BuchContext)
   return (
     <Grid
       rowSpacing={1}
@@ -115,6 +119,8 @@ function Create() {
           </Button>
         </Box>
       </Grid>
+      <div>User name is {buchContext.buch?.titel}</div>
+      <div>User email is {buchContext.buch?.untertitel}</div>
     </Grid>
   );
 }

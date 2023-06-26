@@ -1,0 +1,17 @@
+@startuml Suche
+[*] --> Suchseite_aufgerufen
+Suchseite_aufgerufen --> Suchformular_abgeschickt
+Suchformular_abgeschickt --> Suchergebnis_gefüllt: etwas gefunden
+Suchformular_abgeschickt--> Suchergebnis_leer: nichts gefunden
+
+Suchergebnis_gefüllt --> Suchergebnis_auf_ein_Element_reduziert: klick auf eine Element
+Suchergebnis_gefüllt --> [*]
+Suchergebnis_leer --> [*]
+Suchergebnis_leer --> Suchformular_abgeschickt: andere Suchkriterien verwenden
+Suchergebnis_auf_ein_Element_reduziert --> [*]
+
+Suchseite_aufgerufen: zeige: Suchkriterien
+Suchergebnis_leer: zeige: Leider nichts gefunden
+Suchergebnis_gefüllt: zeige: Ergebnis in Tabelle
+Suchergebnis_auf_ein_Element_reduziert: zeige: Ergebnis mit Bild
+@enduml
